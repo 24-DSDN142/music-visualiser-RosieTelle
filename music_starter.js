@@ -1,18 +1,43 @@
 
 // vocal, drum, bass, and other are volumes ranging from 0 to 100
+let y = 100;
+let firstRun = true;
+let diskImg
+rotateAngle = 0 // needs to be outside of draw_one_frame
 function draw_one_frame(words, vocal, drum, bass, other, counter) {
+if(firstRun){
+diskImg = loadImage('Asset1.png');
+
+  firstRun = false
+}
   background(20)
   textFont('Verdana'); // please use CSS safe fonts
   rectMode(CENTER)
   textSize(24);
   
-  let eyeSize = map(bass,0,100,20,110)
-  ellipse(150,100,eyeSize+80,eyeSize)
-  let eyeSize2 = map(drum,0,100,20,110)
-  ellipse(350,100,eyeSize2+80,eyeSize2)
+//   for(let i = 0; i <= 6; i ++){
+// ellipse(300,y*i,50,50)
+// }
 
-  let mouthSize = map(vocal,0,100,0,400)
-  rect(250,500,150,mouthSize)
+// ellipse(200,200,200,200)
+
+ push();
+ 
+ translate(200, 200)
+ 
+ rotateAngle++;
+
+ rotate(rotateAngle)
+ 
+  image(diskImg, -119.5, -119) // these numbers are half the width and height of image so image off centred
+//image(diskImg, 0, 0)
+
+ if (rotateAngle > 360) {
+  rotateAngle = 0;
+  }
+  
+  pop();
+ 
 
 }
 
