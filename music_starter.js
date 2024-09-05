@@ -10,7 +10,7 @@ diskImg = loadImage('Asset1.png');
 
   firstRun = false
 }
-  background(20)
+  background(150,150,150)
   textFont('Verdana'); // please use CSS safe fonts
   rectMode(CENTER)
   textSize(24);
@@ -38,7 +38,9 @@ diskImg = loadImage('Asset1.png');
   
   pop();
  
-
+  textAlign(CENTER);
+  textSize(vocal);
+  text(words, width/2, height/3);
 }
 
 //    let bar_spacing = height / 10;
@@ -71,7 +73,7 @@ diskImg = loadImage('Asset1.png');
 //    text("other", bar_pos_x, height / 2 + 4 * bar_spacing + 8);
 //    fill(255, 255, 0);
  
-//    // display "words"
-//    textAlign(CENTER);
-//    textSize(vocal);
-//    text(words, width/2, height/3);
+   // display "words"
+   textAlign(CENTER);
+   textSize(vocal);
+   text(words, width/2, height/3);
